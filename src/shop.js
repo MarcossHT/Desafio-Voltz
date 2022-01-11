@@ -58,8 +58,6 @@ class AgedBrie extends QualityParams {
 
 
 class SulfurasHandofRagnaros extends QualityParams {
-  
-
   sulfarasQuality(item) {
     item.quality = 80;
     item.sellIn -= 1;
@@ -68,9 +66,6 @@ class SulfurasHandofRagnaros extends QualityParams {
 
 
 class BackstagepassestoaTAFKAL80ETCconcert extends QualityParams {
-  filter(item) {
-    return item.name === 'Backstage passes to a TAFKAL80ETC concert';
-  }
   updateQualityItem(item) {
     let currentQuality = item.quality + 1
     if(item.sellIn < 1)
