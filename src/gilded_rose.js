@@ -1,6 +1,5 @@
-
-const Shop  = require("./shop");
-const Item  = require("./item");
+const Shop  = require("./classes/shop");
+const Item  = require("./classes/item");
 
 const items = [
   new Item("+5 Dexterity Vest", 10, 20),
@@ -17,7 +16,7 @@ const items = [
 const days = Number(process.argv[2]) || 2;
 const gildedRose = new Shop(items);
 
-console.log("OMGHAI!");
+console.log("Desafio Voltz!");
 for (let day = 0; day < days; day++) {
   console.log(`\n-------- day ${day} --------`);
   console.log("name, sellIn, quality");
