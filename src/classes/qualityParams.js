@@ -9,10 +9,12 @@ class QualityParams {
   
     changeQuality(item, currentValue) {
       if(currentValue >= this.maxQuality()) {
-        return item.quality = this.maxQuality();
+        item.quality = this.maxQuality();
       } else if(currentValue <= this.minQuality()) {
-        return item.quality = this.minQuality();
-      } return item.quality = currentValue;
+        item.quality = this.minQuality();
+      } 
+      item.quality = currentValue;
+      item.sellIn -= 1;
     }
 }
 

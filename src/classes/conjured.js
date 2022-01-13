@@ -9,7 +9,6 @@ class Conjured extends QualityParams {
       lessQuality = 2;}
       const currentQuality = item.quality - lessQuality;
       this.changeQuality(item, currentQuality);
-      item.sellIn -= 1;
     }
 }
 

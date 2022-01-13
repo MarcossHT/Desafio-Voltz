@@ -11,25 +11,26 @@ class Shop {
   updateQuality() {
     for (let i = 0; i < this.items.length; i++) {
       if(this.items[i].name.toLowerCase().includes("conjured")) {
+        console.log(1)
         const conjured = new Conjured();
-        return conjured.updateQualityItem(this.items[i]);
+        conjured.updateQualityItem(this.items[i]);
+        return;
       }
-      if(this.items[i].name !== "Aged Brie" && this.items[i] !== "Sulfuras, Hand of Ragnaros" && this.items[i] !== "Backstage passes to a TAFKAL80ETC concert") {
-        const genericItem = new GenericItem();
-        return genericItem.updateQualityItem(this.items[i]);
-      }
+
       if(this.items[i].name === "Aged Brie") {
-        const agedBrie = new AgedBrie();
-        return agedBrie.updateQualityItem(this.items[i]);
+        new AgedBrie().updateQualityItem(this.items[i]);
+        return;
       }
       if(this.items[i].name === "Sulfuras, Hand of Ragnaros") {
-        const sulfaras = new SulfurasHandofRagnaros();
-        return sulfaras.sulfarasQuality(this.items[i]);
+        new SulfurasHandofRagnaros().sulfarasQuality(this.items[i]);
+        return;
       }
       if(this.items[i].name === "Backstage passes to a TAFKAL80ETC concert") {
-        const backstage = new BackstagepassestoaTAFKAL80ETCconcert();
-        return backstage.updateQualityItem(this.items[i]);
+        new BackstagepassestoaTAFKAL80ETCconcert().updateQualityItem(this.items[i]);
+        return;
       }
+      new GenericItem().updateQualityItem(this.items[i]);
+      return;
     }
   }
 }
