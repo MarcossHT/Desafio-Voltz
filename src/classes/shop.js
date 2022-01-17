@@ -31,7 +31,6 @@ class Shop {
       new GenericItem().updateQualityItem(this.items[i]);
       continue;
     }
-    return this.items;
   }
 }
 module.exports = Shop;
