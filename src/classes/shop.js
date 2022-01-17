@@ -11,27 +11,27 @@ class Shop {
   updateQuality() {
     for (let i = 0; i < this.items.length; i++) {
       if(this.items[i].name.toLowerCase().includes("conjured")) {
-        console.log(1)
         const conjured = new Conjured();
         conjured.updateQualityItem(this.items[i]);
-        return;
+        continue;
       }
 
       if(this.items[i].name === "Aged Brie") {
         new AgedBrie().updateQualityItem(this.items[i]);
-        return;
+        continue;
       }
       if(this.items[i].name === "Sulfuras, Hand of Ragnaros") {
         new SulfurasHandofRagnaros().sulfarasQuality(this.items[i]);
-        return;
+        continue;
       }
       if(this.items[i].name === "Backstage passes to a TAFKAL80ETC concert") {
         new BackstagepassestoaTAFKAL80ETCconcert().updateQualityItem(this.items[i]);
-        return;
+        continue;
       }
       new GenericItem().updateQualityItem(this.items[i]);
-      return;
+      continue;
     }
+    return this.items;
   }
 }
 module.exports = Shop;
