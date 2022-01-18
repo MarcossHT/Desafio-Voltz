@@ -15,3 +15,4 @@ Links de artigos que usei
 
 https://refactoring.guru/design-patterns/strategy
 https://dev.to/alexandreruban/lessons-from-the-gilded-rose-refactoring-kata-pgh
+https://www.chaijs.com/api/bdd/
